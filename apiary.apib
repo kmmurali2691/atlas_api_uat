@@ -10,11 +10,10 @@ HOST: https://atlas.uat.anpi.com
 
 ## Group Dependant Task API
 
-### Get dependant tasks list
 
-#### dependant tasks list [GET /v1/workflows/dep_tasks{?page,size}]
+#### Get dependant tasks list [GET /v1/workflows/dep_tasks{?page,size}]
 
-Get list of dependant tasks.
+get list of dependant tasks.
 + Parameters
 
     + page
@@ -174,7 +173,7 @@ Get list of dependant tasks.
               }
             }
 
-#### Create a dependant task [POST /v1/workflows/dep_tasks/]
+#### Create a dependant task [POST /v1/workflows/dep_tasks]
 
 create a dependant task.
 
@@ -477,9 +476,9 @@ create a dependant task.
               }
             }
 
-#### Update a dependant task [PUT /v1/workflows/dep_tasks/]
+#### Update a dependant task [PUT /v1/workflows/dep_tasks]
 
- update a dependant task.
+update a dependant task.
 
 + Request
     + Headers
@@ -656,7 +655,7 @@ create a dependant task.
 
 #### Get dependant task by Task Id [GET /v1/workflows/dep_tasks/filter]
 
-Get dependant task by Task Id
+get dependant task by Task Id
 
 + Parameters
 
@@ -690,7 +689,7 @@ Get dependant task by Task Id
             }
 
 #### Get dependant task by filter [GET /v1/workflows/dep_tasks/filter-all]
-Get dependant task by given filter parameters.
+get dependant task by given filter parameters.
 
 + Parameters
 
@@ -729,19 +728,9 @@ Get dependant task by given filter parameters.
               }
             }
 
-### Caching dependant tasks
+#### Caching dependant tasks [POST /v1/workflows/dep_tasks]
 
-#### Caching dependant tasks [POST]
-
-Caching dependant tasks.
-+ Request
-    + Headers
-
-            Authorization: Enter your authorization code
-+ Request
-    + Headers
-
-            Authorization: Enter your authorization code
+caching dependant tasks.
 + Request
     + Headers
 
