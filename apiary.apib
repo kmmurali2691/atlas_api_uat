@@ -4,13 +4,12 @@ HOST: https://atlas.uat.anpi.com
  
 # API DOCUMENTATION
   List of APIs used in Workflows, Transactions and Service Order.
-  
-# Group <B>WORKFLOW APIs</B>
-    List of APIs used in Workflows.
 
-## Group Dependant Task API
+# Group Dependant Task API
 
-#### Get dependant tasks list [GET /v1/workflows/dep_tasks{?page,size}]
+### Get, Create & Update dependant a task [/v1/workflows/dep_tasks]
+
+#### Get dependant tasks list [GET]
 
 get list of dependant tasks.
 + Parameters
@@ -171,7 +170,8 @@ get list of dependant tasks.
                 }
               }
             }
-### Create a dependant task [/v1/workflows/dep_tasks]
+            
+
 #### Create a dependant task [POST]
 
 create a dependant task.
@@ -475,9 +475,10 @@ create a dependant task.
               }
             }
             
+
 #### Update a dependant task [PUT]
 
-update a dependant task.
+ update a dependant task.
 
 + Request
     + Headers
@@ -652,9 +653,11 @@ update a dependant task.
               }
             }
 
-#### Get dependant task by Task Id [GET /v1/workflows/dep_tasks/filter]
+### Get dependant task by Task Id [/v1/workflows/dep_tasks/filter]
 
-get dependant task by Task Id
+#### Get dependant task by Task Id [GET]
+
+Get dependant task by Task Id
 
 + Parameters
 
@@ -686,9 +689,10 @@ get dependant task by Task Id
                 }
               }
             }
+### Get dependant task by filter params [/v1/workflows/dep_tasks/filter-all]
 
 #### Get dependant task by filter [GET /v1/workflows/dep_tasks/filter-all]
-get dependant task by given filter parameters.
+Get dependant task by given filter parameters.
 
 + Parameters
 
@@ -726,10 +730,12 @@ get dependant task by given filter parameters.
                 }
               }
             }
+            
+### Caching dependant tasks [/v1/workflows/dep_tasks/reindex]
 
-#### Caching dependant tasks [POST /v1/workflows/dep_tasks]
+#### Caching dependant tasks [POST]
 
-caching dependant tasks.
+Caching dependant tasks.
 + Request
     + Headers
 
@@ -757,12 +763,13 @@ caching dependant tasks.
                 }
               }
             }
+            
 
-### /v1/workflows/dep_tasks/{id}
+### Get & Delete a dependant task by Id [/v1/workflows/dep_tasks/{id}]
 
 #### Get dependant tasks by Id [GET]
 
-Get dependant tasks by Id
+get dependant tasks by Id
 
 + Request
     + Headers
@@ -831,11 +838,11 @@ Delete a dependant task
               }
             }
 
-## Group Gates API
+# Group Gates API
 
-### /v1/workflows/gates
+### Get, Create & Update a gate [/v1/workflows/gates]
 
-#### Get gates list [GET /v1/workflows/gates{?page,size}]
+#### Get list of gates [GET]
 
 Get list of gates
 
@@ -871,6 +878,7 @@ Get list of gates
                 }
               }
             }
+
 
 #### Create a gate [POST]
 
@@ -1464,8 +1472,9 @@ update a gate
                 }
               }
             }
+### Get gate by workflow id [/v1/workflows/gates/filter]
 
-#### Get gate by workflow Id [GET /v1/workflows/gates/filter]
+#### Get gate by workflow id  [GET]
 
 Get gate by workflow Id
 + Request
@@ -1498,8 +1507,10 @@ Get gate by workflow Id
                 }
               }
             }
+### Get gate by filter params [/v1/workflows/gates/filter-all]
 
-#### GET /v1/workflows/gates/filter-all
+#### Get gates by filter params [GET]
+    get gates by below filter params.
 
 + Parameters
 
@@ -1534,11 +1545,12 @@ Get gate by workflow Id
               }
             }
 
-### /v1/workflows/gates/reindex
+### Caching gates [/v1/workflows/gates/reindex]
 
 #### Caching gates [POST]
 
-Caching a gates
+caching a gates
+
 + Request
     + Headers
 
@@ -1567,11 +1579,12 @@ Caching a gates
               }
             }
 
-### /v1/workflows/gates/{id}
+### Get & Delete a gate by id [/v1/workflows/gates/{id}]
 
-#### Get gate by Id [GET]
+#### Get a gate by id [GET]
 
-Get gate by Id
+Get a gate by Id
+
 + Request
     + Headers
 
@@ -1606,7 +1619,8 @@ Get gate by Id
 
 #### Delete a gate [DELETE]
 
-Delete a gate
+ delete a gate
+
 + Request
     + Headers
 
@@ -1639,13 +1653,14 @@ Delete a gate
               }
             }
 
-## Group Partner System Task Dependencies API
+# Group Partner System Task Dependencies API
 
-### /v1/workflows/partner_system_dep_tasks
+### Get, Create & Update PartnerSystemTaskDependency [/v1/workflows/partner_system_dep_tasks]
 
-#### Get PartnerSystemTaskDependencies list [GET /v1/workflows/partner_system_dep_tasks{?page,size}]
+#### Get PartnerSystemTaskDependencies list [GET]
 
-Get list of PartnerSystemTaskDependencies
+get list of PartnerSystemTaskDependencies
+
 + Request
     + Headers
 
@@ -2269,8 +2284,9 @@ Update a PartnerSystemTaskDependency
                 }
               }
             }
+### Get a PartnerSystemTaskDependency by filter params [/v1/workflows/partner_system_dep_tasks/filter-all]
 
-#### GET /v1/workflows/partner_system_dep_tasks/filter-all
+#### Get a PartnerSystemTaskDependency by filter params [GET]
 
 + Request
     + Headers
@@ -2310,7 +2326,7 @@ Update a PartnerSystemTaskDependency
               }
             }
 
-### /v1/workflows/partner_system_dep_tasks/reindex
+### Caching PartnerSystemTaskDependencies [/v1/workflows/partner_system_dep_tasks/reindex]
 
 #### Caching PartnerSystemTaskDependencies [POST]
 
@@ -2343,7 +2359,7 @@ Caching PartnerSystemTaskDependencies
               }
             }
 
-### /v1/workflows/partner_system_dep_tasks/{id}
+### Delete a PartnerSystemTaskDependency [/v1/workflows/partner_system_dep_tasks/{id}]
 
 #### Delete a PartnerSystemTaskDependency [DELETE]
 
@@ -7701,7 +7717,6 @@ Delete a workflow
 
 
 
-# Group <B>TRANSACTION APIs</B>
 
 ## Group Dependant Task Transaction Controller API
 
@@ -14026,9 +14041,6 @@ Change Order
                 }
               }
             }
-
-
-# Group 3. SERVICE ORDER APIs
 
 
 ## Group Caching API
