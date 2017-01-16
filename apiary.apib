@@ -2396,11 +2396,11 @@ Delete a PartnerSystemTaskDependency
               }
             }
 
-## Group Partner System Tasks API
+# Group Partner System Tasks API
 
-### /v1/workflows/partner_system_tasks
+### Get, Create & Update PartnerSystemTasks [/v1/workflows/partner_system_tasks]
 
-#### Get PartnerSystemTasks list [GET /v1/workflows/partner_system_tasks{?page,size}]
+#### Get PartnerSystemTasks list [GET]
 
 Get list of PartnerSystemTasks
 + Request
@@ -3024,8 +3024,9 @@ Update a PartnerSystemTask
                 }
               }
             }
+### Get a partnerSystemTask by filter params [/v1/workflows/dep_tasks]
 
-#### GET /v1/workflows/partner_system_tasks/filter-all
+#### Get a partnerSystemTask by filter params [GET]
 + Request
     + Headers
 
@@ -3064,9 +3065,9 @@ Update a PartnerSystemTask
               }
             }
 
-### /v1/workflows/partner_system_tasks/reindex
+### Caching PartnerSystemTasks [/v1/workflows/partner_system_tasks/reindex]
 
-#### Caching PartnerSystemTask [POST]
+#### Caching PartnerSystemTasks  [POST]
 
 Caching a PartnerSystemTask
 + Request
@@ -3097,7 +3098,7 @@ Caching a PartnerSystemTask
               }
             }
 
-### /v1/workflows/partner_system_tasks/{id}
+### Delete a PartnerSystemTask [/v1/workflows/partner_system_tasks/{id}]
 
 #### Delete a PartnerSystemTask [DELETE]
 
@@ -3134,17 +3135,13 @@ Delete a PartnerSystemTask
               }
             }
 
-## Group SystemTask Dependencies API
+# Group System Task Dependencies API
 
-### /v1/workflows/system_dep_tasks
+### Get, Create & Update System Task Dependencies [/v1/workflows/system_dep_tasks]
 
-#### Get systemTaskDependencies list [GET /v1/workflows/system_dep_tasks{?page,size}]
+#### Get systemTaskDependencies list [GET]
 
 Get list of systemTaskDependencies
-+ Request
-    + Headers
-
-            Authorization: Enter your authorization code
 + Request
     + Headers
 
@@ -3769,7 +3766,8 @@ Update a systemTaskDependency
               }
             }
 
-#### GET /v1/workflows/system_dep_tasks/filter-all
+### Get systemDpendantTask by filter params [/v1/workflows/system_dep_tasks/filter-all]
+#### Get systemDpendantTask by filter params [GET]
 + Request
     + Headers
 
@@ -3808,11 +3806,12 @@ Update a systemTaskDependency
               }
             }
 
-### /v1/workflows/system_dep_tasks/reindex
+### Caching SystemTaskDependencies [/v1/workflows/system_dep_tasks/reindex]
 
-#### Caching SystemTaskDependency [POST]
+#### Caching SystemTaskDependencies [POST]
 
 Caching a SystemTaskDependency
+
 + Request
     + Headers
 
@@ -3841,11 +3840,13 @@ Caching a SystemTaskDependency
               }
             }
 
-### /v1/workflows/system_dep_tasks/{id}
+
+### Delete a SystemTaskDependency [/v1/workflows/system_dep_tasks/{id}]
 
 #### Delete a SystemTaskDependency [DELETE]
 
 Delete a SystemTaskDependency
+
 + Request
     + Headers
 
@@ -3878,11 +3879,11 @@ Delete a SystemTaskDependency
               }
             }
 
-## Group System Tasks API
+# Group System Tasks API
 
-### /v1/workflows/system_tasks
+### Get,Create & Update systemTasks [/v1/workflows/system_tasks]
 
-#### Get systemTasks list [GET /v1/workflows/system_tasks{?page,size}]
+#### Get systemTasks list [GET]
 
 Get list of systemTasks
 + Request
@@ -4576,14 +4577,11 @@ Update a systemTask
                 }
               }
             }
-
-#### Get sytsemtask  and its dependencies with system key and parnter id [GET /v1/workflows/system_tasks/dependents]
+### Get systemTask dependencies by system key and parnter id [/v1/workflows/system_tasks/dependents]
+#### Get sytsemtask  and its dependencies with system key and parnter id [GET]
 
 Get sytsemtask  and its dependencies with system key and parnter id
-+ Request
-    + Headers
 
-            Authorization: Enter your authorization code
 + Request
     + Headers
 
@@ -4620,9 +4618,12 @@ Get sytsemtask  and its dependencies with system key and parnter id
               }
             }
 
-#### Filter api for system Task [GET /v1/workflows/system_tasks/filter-all]
+### Get systemTasks by filter params [/v1/workflows/system_tasks/filter-all]
+
+#### Filter api for system Task [GET]
 
 Filter api for system Task
+
 + Request
     + Headers
 
@@ -4660,6 +4661,8 @@ Filter api for system Task
                 }
               }
             }
+
+### Get systemTask by system key and parnter id [/v1/workflows/system_tasks/partner]
 
 #### Get sytsemtask with system key and parnter id [GET /v1/workflows/system_tasks/partner]
 
@@ -4700,7 +4703,9 @@ Get sytsemtask with system key and parnter id
               }
             }
 
-#### Get system tasks for a partner [GET /v1/workflows/system_tasks/partner/{partnerId}]
+### Get systemTask by parnter id [/v1/workflows/system_tasks/partner/{partnerId}]
+
+#### Get system tasks for a partner [GET]
 
 Get system tasks for a partner
 + Request
@@ -4737,7 +4742,7 @@ Get system tasks for a partner
               }
             }
 
-### /v1/workflows/system_tasks/reindex
+### Caching SystemTasks [/v1/workflows/system_tasks/reindex]
 
 #### Caching SystemTasks [POST]
 
@@ -4770,11 +4775,12 @@ Caching  SystemTasks
               }
             }
 
-### /v1/workflows/system_tasks/{id}
+### Get & Delete a systemTask by id [/v1/workflows/system_tasks/{id}]
 
-#### Get systemTask by Id [GET]
+#### Get systemTask by id [GET]
 
-Get systemTask by Id
+get systemTask by Id
+
 + Request
     + Headers
 
@@ -4809,7 +4815,8 @@ Get systemTask by Id
 
 #### Delete a systemTask [DELETE]
 
-Delete a systemTask
+delete a systemTask
+
 + Request
     + Headers
 
@@ -4842,11 +4849,12 @@ Delete a systemTask
               }
             }
 
-## Group Task Templates API
 
-### /v1/workflows/task_templates
+# Group Task Templates API
 
-#### Get TaskTemplates list [GET /v1/workflows/task_templates{?page,size}]
+### Get, Create & Update a TaskTemplate[/v1/workflows/task_templates]
+
+#### Get TaskTemplates list [GET]
 
 Get list of TaskTemplates
 + Request
@@ -5489,7 +5497,10 @@ Update a TaskTemplate
               }
             }
 
-#### GET /v1/workflows/task_templates/filter-all
+
+### Get taskTemplate by filter params [/v1/workflows/task_templates/filter-all]
+#### Get taskTemplate by filter params [GET]
+
 + Request
     + Headers
 
@@ -5530,7 +5541,7 @@ Update a TaskTemplate
               }
             }
 
-### /v1/workflows/task_templates/reindex
+### Caching TaskTemplates [/v1/workflows/task_templates/reindex]
 
 #### Caching TaskTemplates [POST]
 
@@ -5563,7 +5574,7 @@ Caching a TaskTemplates
               }
             }
 
-### /v1/workflows/task_templates/{id}
+### Get & Delete a TaskTemplate by id [/v1/workflows/task_templates/{id}]
 
 #### Get TaskTemplate by Id [GET]
 
@@ -5635,13 +5646,14 @@ Delete a TaskTemplate
               }
             }
 
-## Group Tasks API
+# Group Tasks API
 
-### /v1/workflows/tasks
+### Get,Create & Update tasks [/v1/workflows/tasks]
 
-#### Get tasks list [GET /v1/workflows/tasks{?page,size}]
+#### Get tasks list [GET]
 
-Get list of tasks
+get list of tasks
+
 + Request
     + Headers
 
