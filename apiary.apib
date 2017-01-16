@@ -4852,7 +4852,7 @@ delete a systemTask
 
 # Group Task Templates API
 
-### Get, Create & Update a TaskTemplate[/v1/workflows/task_templates]
+### Get, Create & Update a TaskTemplate [/v1/workflows/task_templates]
 
 #### Get TaskTemplates list [GET]
 
@@ -6518,7 +6518,7 @@ Update a Task
               }
             }
 
-### /v1/workflows/tasks/bulk
+### Bulk Insert of Tasks [/v1/workflows/tasks/bulk]
 
 #### Bulk Insert of Tasks [POST]
 
@@ -6563,7 +6563,9 @@ Insert multiple tasks in a task template
               }
             }
 
-#### Get task by template Id [GET /v1/workflows/tasks/filter]
+### Get task by template id [/v1/workflows/tasks/filter]
+
+#### Get task by template id [GET]
 
 Get task be template Id
 + Request
@@ -6598,7 +6600,9 @@ Get task be template Id
               }
             }
 
-#### Filter tasks [GET /v1/workflows/tasks/filter-all]
+### Get task by filter params [/v1/workflows/tasks/filter-all]
+
+#### Get tasks by filter params [GET]
 
 Filter tasks
 + Request
@@ -6639,11 +6643,12 @@ Filter tasks
               }
             }
 
-### /v1/workflows/tasks/reindex
+### Caching Tasks [/v1/workflows/tasks/reindex]
 
 #### Caching Tasks [POST]
 
 Caching a tasks
+
 + Request
     + Headers
 
@@ -6672,11 +6677,12 @@ Caching a tasks
               }
             }
 
-### /v1/workflows/tasks/{id}
+### Get & Delete a task by id [/v1/workflows/tasks/{id}]
 
 #### Get task by Id [GET]
 
 Get task by task Id
+
 + Request
     + Headers
 
@@ -6712,6 +6718,7 @@ Get task by task Id
 #### Delete a Task [DELETE]
 
 Delete a Task
+
 + Request
     + Headers
 
@@ -6744,11 +6751,11 @@ Delete a Task
               }
             }
 
-## Group Workflows API
+# Group Workflows API
 
-### /v1/workflows/workflows
+### Get, Create & Update workflows [/v1/workflows/workflows]
 
-#### Get workflows list [GET /v1/workflows/workflows{?page,size}]
+#### Get workflows list [GET]
 
 Get list of workflows
 + Request
@@ -7537,7 +7544,9 @@ Update a workflow
               }
             }
 
-#### Filter a workflow [GET /v1/workflows/workflows/filter]
+### Get workflows by filter params [/v1/workflows/workflows/filter]
+
+#### Filter a workflow [GET]
 
 Sort,Page and Size Filters
 + Request
@@ -7581,7 +7590,7 @@ Sort,Page and Size Filters
               }
             }
 
-### /v1/workflows/workflows/reindex
+### Caching workflows [/v1/workflows/workflows/reindex]
 
 #### Caching workflows [POST]
 
@@ -7615,7 +7624,7 @@ Caching a workflow
               }
             }
 
-### /v1/workflows/workflows/search/{name}
+### Get workflow by name [/v1/workflows/workflows/search/{name}]
 
 #### Get workflow by name [GET]
 
@@ -7653,7 +7662,7 @@ Get workflows by name
               }
             }
 
-### /v1/workflows/workflows/{id}
+### Get & Delete a workflow by Id [/v1/workflows/workflows/{id}]
 
 #### Get workflow by Id [GET]
 
@@ -7730,11 +7739,11 @@ Delete a workflow
 
 
 
-## Group Dependant Task Transaction Controller API
+# Group Dependant Task Transaction Controller API
 
-### /v1/transactions/dep_task_transactions
+### Get,Create & Delete dependantTaskTransactions [/v1/transactions/dep_task_transactions]
 
-#### Get dependantTaskTransaction list [GET /v1/transactions/dep_task_transactions{?page,size}]
+#### Get dependantTaskTransaction list [GET]
 
 Get list of dependantTaskTransactions.
 + Request
@@ -7749,7 +7758,7 @@ Get list of dependantTaskTransactions.
     
     + size
 
-#### Create a dependantTaskTransaction [POST /v1/transactions/dep_task_transactions]
+#### Create a dependantTaskTransaction [POST]
 
 Create a dependantTaskTransaction.
 
@@ -8074,7 +8083,8 @@ Update a dependantTaskTransaction.
               }
             }
 
-#### Filter a dependantTaskTransaction [GET /v1/transactions/dep_task_transactions/filter]
+###  Get dendantTaskTransaction by filter params [/v1/transactions/dep_task_transactions/filter]
+#### Filter a dependantTaskTransaction [GET]
 
 Sort,Page and Size Filters
 + Request
@@ -8116,7 +8126,7 @@ Sort,Page and Size Filters
               }
             }
 
-### /v1/transactions/dep_task_transactions/reindex
+### Caching dependantTaskTransaction [/v1/transactions/dep_task_transactions/reindex]
 
 #### Caching dependantTaskTransaction [POST]
 
@@ -8150,7 +8160,8 @@ Caching a dependantTaskTransaction
               }
             }
 
-#### Get dependantTaskTransaction by taskTransactionId [GET /v1/transactions/dep_task_transactions/taskTransactions]
+### Get dependantTaskTransaction by taskTransactionId [/v1/transactions/dep_task_transactions/taskTransactions]
+#### Get dependantTaskTransaction by taskTransactionId [GET]
 
 Get dependantTaskTransaction by taskTransactionId.
 + Request
@@ -8186,7 +8197,7 @@ Get dependantTaskTransaction by taskTransactionId.
               }
             }
 
-### /v1/transactions/dep_task_transactions/{id}
+###  Get & Delete a dependantTaskTransaction by Id [/v1/transactions/dep_task_transactions/{id}]
 
 #### Get dependantTaskTransaction by Id [GET]
 
@@ -8260,11 +8271,11 @@ Delete a dependantTaskTransaction.
               }
             }
 
-## Group Gate Transactions
+# Group Gate Transactions
 
-### /v1/transactions/gate_transactions
+### Get, Create & Update gateTransactions [/v1/transactions/gate_transactions]
 
-#### Get gateTransactions list [GET /v1/transactions/gate_transactions{?page,size}]
+#### Get gateTransactions list [GET]
 
 Get list of gateTransactions
 + Request
@@ -8700,7 +8711,8 @@ Update a gateTransaction.
               }
             }
 
-#### Filter a gateTransaction [GET /v1/transactions/gate_transactions/filter]
+### Get a gateTransaction by filter params [/v1/transactions/gate_transactions/filter]
+#### Filter a gateTransaction [GET]
 
 Sort,Page and Size Filters
 + Request
@@ -8742,7 +8754,9 @@ Sort,Page and Size Filters
               }
             }
 
-#### GET /v1/transactions/gate_transactions/orderId
+### Get gateTransactions by orderId [/v1/transactions/gate_transactions/orderId]
+#### Get gateTransactions by orderId [GET]
+
 + Request
     + Headers
 
@@ -8776,7 +8790,7 @@ Sort,Page and Size Filters
               }
             }
 
-### /v1/transactions/gate_transactions/reindex
+### Caching gateTransaction [/v1/transactions/gate_transactions/reindex]
 
 #### Caching gateTransaction [POST]
 
@@ -8810,7 +8824,8 @@ Caching a gateTransaction
               }
             }
 
-#### Filter a gateTransaction [GET /v1/transactions/gate_transactions/transactionId]
+### Get a gateTransaction by workflowTransactionId [/v1/transactions/gate_transactions/transactionId]
+#### Filter a gateTransaction [GET]
 
 Filter a gateTransaction by workflowTransactionId
 + Request
@@ -8846,7 +8861,7 @@ Filter a gateTransaction by workflowTransactionId
               }
             }
 
-### /v1/transactions/gate_transactions/{id}
+### Get & Delete a gateTransaction by Id [/v1/transactions/gate_transactions/{id}]
 
 #### Get a gateTransaction [GET]
 
@@ -8920,13 +8935,14 @@ Delete a gateTransaction
               }
             }
 
-## Group Jeopardy Codes
+# Group Jeopardy Codes
 
-### /v1/transactions/jeopardy_codes
+### Get, Create & Update jeopardy codes [/v1/transactions/jeopardy_codes]
 
-#### Get jeopardy codes list [GET /v1/transactions/jeopardy_codes{?page,size}]
+#### Get jeopardy codes list [GET]
 
 Get list of jeopardy codes
+
 + Request
     + Headers
 
@@ -9433,11 +9449,6 @@ Create a jeopardy code.
 Update a jeopardy code.
 
 + Request
-+ Request
-    + Headers
-
-            Authorization: Enter your authorization code
-
     + Headers
 
             Authorization: Enter your authorization code
@@ -9623,7 +9634,9 @@ Update a jeopardy code.
               }
             }
 
-#### Filter a jeopardy code [GET /v1/transactions/jeopardy_codes/filter]
+### Get jeopardy codes by filter params [/v1/transactions/jeopardy_codes/filter]
+#### Filter a jeopardy code [GET]
+
 
 Sort,Page and Size Filters.
 + Request
@@ -9665,7 +9678,7 @@ Sort,Page and Size Filters.
               }
             }
 
-### /v1/transactions/jeopardy_codes/reindex
+### Caching Jeopardy Code [/v1/transactions/jeopardy_codes/reindex]
 
 #### Caching Jeopardy Code [POST]
 
@@ -9699,7 +9712,7 @@ Caching a jeopardy code.
               }
             }
 
-### /v1/transactions/jeopardy_codes/{id}
+### Get & Delete a jeopardy code [/v1/transactions/jeopardy_codes/{id}]
 
 #### Get a jeopardy code [GET]
 
@@ -9773,11 +9786,11 @@ Delete a jeopardy code
               }
             }
 
-## Group Jeopardy Transactions
+# Group Jeopardy Transactions
 
-### /v1/transactions/jeopardy_transactions
+### Get, Create & Update jeopardy transactions [/v1/transactions/jeopardy_transactions]
 
-#### Get jeopardy transaction list [GET /v1/transactions/jeopardy_transactions{?page,size}]
+#### Get jeopardy transaction list [GET]
 
 Get list of jeopardy transactions
 + Request
@@ -10511,7 +10524,10 @@ Update a jeopardy transactions.
               }
             }
 
-#### Filter a jeopardy transaction [GET /v1/transactions/jeopardy_transactions/filter]
+### Get jeopardy transaction by filter params [/v1/transactions/jeopardy_transactions/filter]
+
+#### Filter a jeopardy transaction [GET]
+
 
 Sort,Page and Size Filters.
 + Request
@@ -10553,7 +10569,7 @@ Sort,Page and Size Filters.
               }
             }
 
-### /v1/transactions/jeopardy_transactions/reindex
+### Caching jeopardy transactions [/v1/transactions/jeopardy_transactions/reindex]
 
 #### Caching jeopardy transactions [POST]
 
@@ -10587,7 +10603,7 @@ Caching a jeopardy transactions
               }
             }
 
-### /v1/transactions/jeopardy_transactions/{id}
+### Get & Delete jeopardy transaction by Id [/v1/transactions/jeopardy_transactions/{id}]
 
 #### Get jeopardy transaction by Id [GET]
 
@@ -10661,11 +10677,11 @@ Delete a jeopardy transactions.
               }
             }
 
-## Group Task Transactions API
+# Group Task Transactions API
 
-### /v1/transactions/task_transactions
+### Get, Create & Update TaskTransactions [/v1/transactions/task_transactions]
 
-#### Get TaskTransaction list [GET /v1/transactions/task_transactions{?page,size}]
+#### Get TaskTransaction list [GET]
 
 Get list of TaskTransactions.
 + Request
@@ -11669,7 +11685,7 @@ Update a taskTransaction
               }
             }
 
-### /v1/transactions/task_transactions/call_back
+### Call back to CRM  [/v1/transactions/task_transactions/call_back]
 
 #### Call back to CRM  [POST]
 
@@ -11752,7 +11768,8 @@ Call back to CRM
               }
             }
 
-#### Filter a TaskTransactions [GET /v1/transactions/task_transactions/filter]
+### Get taskTransactions by filter params [/v1/transactions/task_transactions/filter]
+#### Filter a TaskTransactions [GET]
 
 Sort,Page and Size Filters
 + Request
@@ -11794,7 +11811,9 @@ Sort,Page and Size Filters
               }
             }
 
-#### PUT /v1/transactions/task_transactions/functional-users
+###  Update functional Users [/v1/transactions/task_transactions/functional-users]
+####  Update functional Users [PUT]
+
 + Request
     + Headers
 
@@ -11828,7 +11847,8 @@ Sort,Page and Size Filters
               }
             }
 
-#### Get taskTransaction by gateTransactionId [GET /v1/transactions/task_transactions/gateTransactions]
+### Get taskTransaction by gateTransactionId [/v1/transactions/task_transactions/gateTransactions]
+#### Get taskTransaction by gateTransactionId [GET]
 
 Get taskTransaction by gateTransactionId
 + Request
@@ -11864,7 +11884,7 @@ Get taskTransaction by gateTransactionId
               }
             }
 
-### /v1/transactions/task_transactions/mark_complete/{id}
+### Update taskTransaction by Id [/v1/transactions/task_transactions/mark_complete/{id}]
 
 #### Update taskTransaction by Id [PUT]
 
@@ -11902,7 +11922,7 @@ Update taskTransaction by Id
               }
             }
 
-### /v1/transactions/task_transactions/mark_skipped/{id}
+### Mark skipped [/v1/transactions/task_transactions/mark_skipped/{id}]
 
 #### Mark skipped [PUT]
 
@@ -11940,7 +11960,8 @@ Mark skipped
               }
             }
 
-#### Get taskTransaction by orderId [GET /v1/transactions/task_transactions/orderId]
+### Get taskTransaction by orderId [/v1/transactions/task_transactions/orderId]
+#### Get taskTransaction by orderId [GET]
 
 Get taskTransaction by orderId
 + Request
@@ -11976,9 +11997,9 @@ Get taskTransaction by orderId
               }
             }
 
-### /v1/transactions/task_transactions/perform_task/{id}
+### Perform task by Id [/v1/transactions/task_transactions/perform_task/{id}]
 
-#### perform task by Id [PUT]
+#### Perform task by Id [PUT]
 
 perform task by Id
 + Request
@@ -12014,7 +12035,7 @@ perform task by Id
               }
             }
 
-### /v1/transactions/task_transactions/reindex
+### Caching taskTransactions [/v1/transactions/task_transactions/reindex]
 
 #### Caching taskTransactions [POST]
 
@@ -12048,7 +12069,7 @@ Caching a taskTransaction
               }
             }
 
-### /v1/transactions/task_transactions/{id}
+### Get & Delete taskTransaction by Id [/v1/transactions/task_transactions/{id}]
 
 #### Get taskTransaction by Id [GET]
 
@@ -12122,9 +12143,9 @@ Delete a taskTransaction
               }
             }
 
-### /v1/transactions/task_transactions/{id}/add-note
+### Add note [/v1/transactions/task_transactions/{id}/add-note]
 
-#### PUT
+#### Add note [PUT]
 + Request
     + Headers
 
@@ -12158,9 +12179,9 @@ Delete a taskTransaction
               }
             }
 
-### /v1/transactions/task_transactions/{id}/schedule-date
+### Update schdule date [/v1/transactions/task_transactions/{id}/schedule-date]
 
-#### PUT
+#### Update schdule date [PUT]
 + Request
     + Headers
 
@@ -12194,11 +12215,11 @@ Delete a taskTransaction
               }
             }
 
-## Group Workflow Transactions
+# Group Workflow Transactions
 
-### /v1/transactions/workflow_transactions
+### Get, Create & Update workflow transactions [/v1/transactions/workflow_transactions]
 
-#### get All workflow transactions [GET /v1/transactions/workflow_transactions{?page,size}]
+#### Get All workflow transactions [GET]
 
 Returns List of all workflow transactions
 + Request
@@ -13170,7 +13191,7 @@ Update a workflowTransaction
               }
             }
 
-### /v1/transactions/workflow_transactions/assign_workflow
+### Assign Workflow [/v1/transactions/workflow_transactions/assign_workflow]
 
 #### Assign Workflow [PUT]
 
@@ -13556,29 +13577,10 @@ Assign a Workflow
               }
             }
 
-#### Filter a workflowTransaction [GET /v1/transactions/workflow_transactions/filter]
+### Get a workflowTransaction by filter params [/v1/transactions/workflow_transactions/filter]
+#### Filter a workflowTransaction [GET]
 
 Sort,Page and Size Filters
-+ Request
-    + Headers
-
-            Authorization: Enter your authorization code
-
-+ Request
-    + Headers
-
-            Authorization: Enter your authorization code
-
-+ Request
-    + Headers
-
-            Authorization: Enter your authorization code
-
-+ Request
-    + Headers
-
-            Authorization: Enter your authorization code
-
 + Request
     + Headers
 
@@ -13618,23 +13620,9 @@ Sort,Page and Size Filters
               }
             }
 
-### /v1/transactions/workflow_transactions/order/{id}/cancel-order
+### Update cancel order [/v1/transactions/workflow_transactions/order/{id}/cancel-order]
 
-#### PUT
-+ Request
-    + Headers
-
-            Authorization: Enter your authorization code
-
-+ Request
-    + Headers
-
-            Authorization: Enter your authorization code
-
-+ Request
-    + Headers
-
-            Authorization: Enter your authorization code
+#### Update cancel order [PUT]
 
 + Request
     + Headers
@@ -13669,24 +13657,13 @@ Sort,Page and Size Filters
               }
             }
 
-### /v1/transactions/workflow_transactions/order/{id}/cancel-order-always
+### Update cancel order always [/v1/transactions/workflow_transactions/order/{id}/cancel-order-always]
 
-#### PUT
+#### Update cancel order alwaays [PUT]
 + Request
     + Headers
 
             Authorization: Enter your authorization code
-
-+ Request
-    + Headers
-
-            Authorization: Enter your authorization code
-
-+ Request
-    + Headers
-
-            Authorization: Enter your authorization code
-
 
 + Parameters
 
@@ -13715,7 +13692,7 @@ Sort,Page and Size Filters
               }
             }
 
-### /v1/transactions/workflow_transactions/order/{orderId}/can-reassign
+### Check can reassign order [/v1/transactions/workflow_transactions/order/{orderId}/can-reassign]
 
 #### Check can reassign order [GET]
 
@@ -13724,12 +13701,6 @@ Check can reassign order
     + Headers
 
             Authorization: Enter your authorization code
-
-+ Request
-    + Headers
-
-            Authorization: Enter your authorization code
-
 
 + Parameters
 
@@ -13758,7 +13729,7 @@ Check can reassign order
               }
             }
 
-### /v1/transactions/workflow_transactions/order/{orderId}/system-tasks
+### Available System Tasks for order [/v1/transactions/workflow_transactions/order/{orderId}/system-tasks]
 
 #### Available System Tasks for order [GET]
 
@@ -13796,7 +13767,7 @@ Available System Tasks for order
               }
             }
 
-### /v1/transactions/workflow_transactions/reindex
+### Caching workflowTransaction [/v1/transactions/workflow_transactions/reindex]
 
 #### Caching workflowTransaction [POST]
 
@@ -13830,7 +13801,7 @@ Caching a workflowTransaction
               }
             }
 
-### /v1/transactions/workflow_transactions/start_workflow/{id}
+### Start workflowTransaction by Id [/v1/transactions/workflow_transactions/start_workflow/{id}]
 
 #### Start workflowTransaction by Id [PUT]
 
@@ -13868,7 +13839,7 @@ Start workflowTransactions by Id
               }
             }
 
-### /v1/transactions/workflow_transactions/update_dates/{id}
+### Update workflowTransaction date by Id [/v1/transactions/workflow_transactions/update_dates/{id}]
 
 #### Update workflowTransaction date by Id [PUT]
 
@@ -13906,7 +13877,7 @@ Update workflowTransaction by Id
               }
             }
 
-### /v1/transactions/workflow_transactions/{id}
+### Get & Delete workflowTransaction by Id [/v1/transactions/workflow_transactions/{id}]
 
 #### Get workflowTransaction by Id [GET]
 
@@ -13980,7 +13951,7 @@ Delete a workflowTransaction
               }
             }
 
-### /v1/transactions/workflow_transactions/{id}/change-order-workflow
+### Update change order workflow [/v1/transactions/workflow_transactions/{id}/change-order-workflow]
 
 #### Change Order [PUT]
 
@@ -14018,9 +13989,9 @@ Change Order
               }
             }
 
-### /v1/transactions/workflow_transactions/{orderId}/reassign-workflow
+### Reassign workflow [/v1/transactions/workflow_transactions/{orderId}/reassign-workflow]
 
-#### PUT
+#### Reassign workflow [PUT]
 + Request
     + Headers
 
@@ -14055,9 +14026,9 @@ Change Order
             }
 
 
-## Group Caching API
+# Group Caching API
 
-### /service-order-api/admin/index-docs/{entityType}
+### Update indexs [/service-order-api/admin/index-docs/{entityType}]
 
 #### Update indexs list [PUT]
 
@@ -14095,11 +14066,11 @@ Update Index
               }
             }
 
-## Group ChangeRequest API
+# Group Change Request API
 
-### /service-order-api/change-requests
+### Get & Create changeRequests [/service-order-api/change-requests]
 
-#### Caching changeRequest [GET /service-order-api/change-requests{?page,size,sort,filter,search}]
+#### Caching changeRequest [GET]
 
 Caching a changeRequest
 + Request
@@ -14151,15 +14122,6 @@ Create a change request
 
             Authorization: Enter your authorization code
 
-+ Request
-    + Headers
-
-            Authorization: Enter your authorization code
-
-+ Request
-    + Headers
-
-            Authorization: Enter your authorization code
 
 
 + Response 200
@@ -14185,14 +14147,11 @@ Create a change request
               }
             }
 
-#### Download Change Request [GET /service-order-api/change-requests/download]
+
+### Download Change Request [/service-order-api/change-requests/download]
+#### Download Change Request [GET]
 
 Download Change Request
-+ Request
-    + Headers
-
-            Authorization: Enter your authorization code
-
 + Request
     + Headers
 
@@ -14236,7 +14195,7 @@ Download Change Request
               }
             }
 
-### /service-order-api/change-requests/{id}
+### Get & Update changeRequest by Id [/service-order-api/change-requests/{id}]
 
 #### Get changeRequest  [GET]
 
@@ -14576,7 +14535,7 @@ Update a changeRequest
               }
             }
 
-### /service-order-api/change-requests/{id}/cancel
+### Cancel LNP Order [/service-order-api/change-requests/{id}/cancel]
 
 #### Cancel LNP Order [PUT]
 
@@ -14586,10 +14545,6 @@ Cancel LNP Order
 
             Authorization: Enter your authorization code
 
-+ Request
-    + Headers
-
-            Authorization: Enter your authorization code
 
 
 + Parameters
@@ -14619,7 +14574,7 @@ Cancel LNP Order
               }
             }
 
-### /service-order-api/change-requests/{id}/carrier/{carrier}
+### Update changeCarrier by Id [/service-order-api/change-requests/{id}/carrier/{carrier}]
 
 #### Update changeCarrier by Id [PUT]
 
@@ -14659,7 +14614,7 @@ Update changeCarrier by Id
               }
             }
 
-### /service-order-api/change-requests/{id}/change-request-items
+### Change request items [/service-order-api/change-requests/{id}/change-request-items]
 
 #### Change request items [GET]
 + Request
@@ -14695,15 +14650,11 @@ Update changeCarrier by Id
               }
             }
 
-### /service-order-api/change-requests/{id}/expedite/{flag}
+### Update changeExpediteFlag by Id [/service-order-api/change-requests/{id}/expedite/{flag}]
 
 #### Update changeExpediteFlag by Id [PUT]
 
 Update changeExpediteFlag by Id
-+ Request
-    + Headers
-
-            Authorization: Enter your authorization code
 
 + Request
     + Headers
@@ -14740,7 +14691,7 @@ Update changeExpediteFlag by Id
               }
             }
 
-### /service-order-api/change-requests/{id}/lnp-foc-date
+### Update lnpFocDate by Id [/service-order-api/change-requests/{id}/lnp-foc-date]
 
 #### Update lnpFocDate by Id [PUT]
 
@@ -14778,7 +14729,7 @@ Update lnpFocDate by Id
               }
             }
 
-### /service-order-api/change-requests/{id}/notes
+### Notes by Id [/service-order-api/change-requests/{id}/notes]
 
 #### Notes by Id [GET]
 
@@ -14816,7 +14767,7 @@ Notes by Id
               }
             }
 
-### /service-order-api/change-requests/{id}/notes-count
+### Notes count [/service-order-api/change-requests/{id}/notes-count]
 
 #### Notes count [GET]
 + Request
@@ -14852,16 +14803,11 @@ Notes by Id
               }
             }
 
-### /service-order-api/change-requests/{id}/owner/{ownerId}
+### Update orderOwner by owner Id [/service-order-api/change-requests/{id}/owner/{ownerId}]
 
 #### Update orderOwner by owner Id [PUT]
 
 Update orderOwner by owner Id
-+ Request
-    + Headers
-
-            Authorization: Enter your authorization code
-
 + Request
     + Headers
 
@@ -14897,11 +14843,12 @@ Update orderOwner by owner Id
               }
             }
 
-### /service-order-api/change-requests/{id}/pon/{pon}
+### Update PON [/service-order-api/change-requests/{id}/pon/{pon}]
 
 #### Update PON  [PUT]
 
 Update PON by Id
+
 + Request
     + Headers
 
@@ -14937,7 +14884,7 @@ Update PON by Id
               }
             }
 
-### /service-order-api/change-requests/{id}/prov-ops-owner/{ownerId}
+### Update provOpsOwner by Id [/service-order-api/change-requests/{id}/prov-ops-owner/{ownerId}]
 
 #### Update provOpsOwner by Id [PUT]
 
@@ -14977,7 +14924,7 @@ Update provOpsOwner by Id
               }
             }
 
-### /service-order-api/change-requests/{id}/reject
+### Reject LNP Order [/service-order-api/change-requests/{id}/reject]
 
 #### Reject LNP Order [PUT]
 
@@ -15015,7 +14962,7 @@ Reject LNP Order
               }
             }
 
-### /service-order-api/change-requests/{id}/reject-status/{statusId}
+### Update rejectStatus by Id [/service-order-api/change-requests/{id}/reject-status/{statusId}]
 
 #### Update rejectStatus by Id [PUT]
 
@@ -15055,7 +15002,7 @@ Update rejectStatus by Id
               }
             }
 
-### /service-order-api/change-requests/{id}/schedule-date
+### Update scheduleDate by Id [/service-order-api/change-requests/{id}/schedule-date]
 
 #### Update scheduleDate by Id [PUT]
 
@@ -15093,7 +15040,7 @@ Update scheduleDate by Id
               }
             }
 
-### /service-order-api/change-requests/{id}/sla-date
+### Update slaDate by Id [/service-order-api/change-requests/{id}/sla-date]
 
 #### Update slaDate by Id [PUT]
 
@@ -15131,16 +15078,11 @@ Update slaDate by Id
               }
             }
 
-### /service-order-api/change-requests/{id}/stage/{stageId}
+### Update changeOrderStage by Id [/service-order-api/change-requests/{id}/stage/{stageId}]
 
 #### Update changeOrderStage by Id [PUT]
 
 Update changeOrderStage by Id
-+ Request
-    + Headers
-
-            Authorization: Enter your authorization code
-
 + Request
     + Headers
 
@@ -15176,7 +15118,7 @@ Update changeOrderStage by Id
               }
             }
 
-### /service-order-api/change-requests/{id}/status
+### Update  status of Change request order [/service-order-api/change-requests/{id}/status]
 
 #### Update  status of Change request order [PUT]
 
@@ -15214,7 +15156,7 @@ Update status of Change request order
               }
             }
 
-### /service-order-api/change-requests/{id}/update-task
+### Update tasks by Id [/service-order-api/change-requests/{id}/update-task]
 
 #### Update tasks by Id [PUT]
 
@@ -15252,7 +15194,7 @@ Update tasks by Id
               }
             }
 
-### /service-order-api/change-requests/{id}/workflow
+### Update workflow by Id [/service-order-api/change-requests/{id}/workflow]
 
 #### Update workflow by Id [PUT]
 
@@ -15290,11 +15232,11 @@ Update workflow by Id
               }
             }
 
-## Group Notes API
+# Group Notes API
 
-### /service-order-api/notes
+### Get & Create notes [/service-order-api/notes]
 
-#### Caching notes [GET /service-order-api/notes{?page,size,sort,sourceId}]
+#### Caching notes [GET]
 
 Caching notes
 + Request
@@ -15540,7 +15482,7 @@ Create a note
               }
             }
 
-### /service-order-api/notes/count/{sourceId}
+### Get count by Id [/service-order-api/notes/count/{sourceId}]
 
 #### Get count [GET]
 
@@ -15578,7 +15520,7 @@ Get count by Id
               }
             }
 
-### /service-order-api/notes/{id}
+### Get & Update a note [/service-order-api/notes/{id}]
 
 #### Show a note [GET]
 
@@ -15824,18 +15766,13 @@ Update a note
               }
             }
 
-## Group Orders API
+# Group Orders API
 
-### /v1/service-orders
+### Get & Create the orders  [/v1/service-orders]
 
-#### Caching the orders [GET /v1/service-orders{?page,size,sort,filter,search}]
+#### Caching the orders [GET]
 
 Returns List of orders
-+ Request
-    + Headers
-
-            Authorization: Enter your authorization code
-
 + Request
     + Headers
 
@@ -16933,19 +16870,11 @@ Create a order
               }
             }
 
-#### Download Service Order [GET /v1/service-orders/download]
+### Download Service Order [/v1/service-orders/download]
+#### Download Service Order [GET]
+
 
 Download Service Order
-+ Request
-    + Headers
-
-            Authorization: Enter your authorization code
-
-+ Request
-    + Headers
-
-            Authorization: Enter your authorization code
-
 + Request
     + Headers
 
@@ -16989,19 +16918,13 @@ Download Service Order
               }
             }
 
-### /v1/service-orders/download-status
+### Get download status [/v1/service-orders/download-status]
 
-#### GET
+#### Get download status [GET]
 + Request
     + Headers
 
             Authorization: Enter your authorization code
-
-+ Request
-    + Headers
-
-            Authorization: Enter your authorization code
-
 
 + Response 200
 
@@ -17026,7 +16949,7 @@ Download Service Order
               }
             }
 
-### /v1/service-orders/download-status/{uuid}
+### Get & Delete Download status by UUID [/v1/service-orders/download-status/{uuid}]
 
 #### Get Download status [GET]
 
@@ -17105,7 +17028,7 @@ Delete downloaded file
               }
             }
 
-### /v1/service-orders/{id}
+### Get & Update order by Id  [/v1/service-orders/{id}]
 
 #### Get order by Id [GET]
 
@@ -17701,7 +17624,7 @@ Update a order
               }
             }
 
-### /v1/service-orders/{id}/can-change
+###  Get canchange flag details by Id [/v1/service-orders/{id}/can-change]
 
 #### Get canchange flag details by Id [GET]
 
@@ -17739,7 +17662,7 @@ Update tasks
               }
             }
 
-### /v1/service-orders/{id}/can-revoke
+### Revoke flag details [/v1/service-orders/{id}/can-revoke]
 
 #### Revoke flag details [GET]
 + Request
@@ -17775,7 +17698,7 @@ Update tasks
               }
             }
 
-### /v1/service-orders/{id}/cancel-order
+### Update cancel order [/v1/service-orders/{id}/cancel-order]
 
 #### Update cancel order [PUT]
 
@@ -17784,13 +17707,6 @@ Update cancel order
     + Headers
 
             Authorization: Enter your authorization code
-
-+ Request
-    + Headers
-
-            Authorization: Enter your authorization code
-
-
 + Parameters
 
     + id (required)
@@ -17818,7 +17734,7 @@ Update cancel order
               }
             }
 
-### /v1/service-orders/{id}/cannot-reassign
+### Update - order cannot be reassigned [/v1/service-orders/{id}/cannot-reassign]
 
 #### Update - order cannot be reassigned [PUT]
 
@@ -17856,7 +17772,7 @@ Update - order cannot be reassigned
               }
             }
 
-### /v1/service-orders/{id}/cd-date
+### Update CD Date [/v1/service-orders/{id}/cd-date]
 
 #### Update CD Date [PUT]
 
@@ -17894,7 +17810,7 @@ Update CD Date
               }
             }
 
-### /v1/service-orders/{id}/change-order
+### Update order [/v1/service-orders/{id}/change-order]
 
 #### Update order [PUT]
 
@@ -17903,17 +17819,6 @@ Update order
     + Headers
 
             Authorization: Enter your authorization code
-
-+ Request
-    + Headers
-
-            Authorization: Enter your authorization code
-
-+ Request
-    + Headers
-
-            Authorization: Enter your authorization code
-
 
 + Parameters
 
@@ -17942,16 +17847,11 @@ Update order
               }
             }
 
-### /v1/service-orders/{id}/complexity/{complexityId}
+### Update a orderComplexity [/v1/service-orders/{id}/complexity/{complexityId}]
 
 #### Update a orderComplexity [PUT]
 
 Update a orderComplexity
-+ Request
-    + Headers
-
-            Authorization: Enter your authorization code
-
 + Request
     + Headers
 
@@ -17987,7 +17887,9 @@ Update a orderComplexity
               }
             }
 
-#### Get notes and attachment Count by Id [GET /v1/service-orders/{id}/count]
+### Get notes and attachment Count by Id [/v1/service-orders/{id}/count]
+#### Get notes and attachment Count by Id [GET]
+
 
 Get notes and attachment count by Id
 + Request
@@ -18025,7 +17927,7 @@ Get notes and attachment count by Id
               }
             }
 
-### /v1/service-orders/{id}/expedite/{flag}
+### Update a expediteFlag [/v1/service-orders/{id}/expedite/{flag}]
 
 #### Update a expediteFlag [PUT]
 
@@ -18065,7 +17967,7 @@ Update a expediteFlag
               }
             }
 
-### /v1/service-orders/{id}/lnp-foc-date
+### Update lnp FOC date [/v1/service-orders/{id}/lnp-foc-date]
 
 #### Update lnp FOC date [PUT]
 
@@ -18103,7 +18005,7 @@ Update lnp date
               }
             }
 
-### /v1/service-orders/{id}/lnp-summary
+### lnp Summary [/v1/service-orders/{id}/lnp-summary]
 
 #### lnp Summary [GET]
 
@@ -18141,7 +18043,7 @@ lnp summary
               }
             }
 
-### /v1/service-orders/{id}/notes
+### Get note by Id [/v1/service-orders/{id}/notes]
 
 #### Get note by Id [GET]
 
@@ -18179,7 +18081,7 @@ Get note by Id
               }
             }
 
-### /v1/service-orders/{id}/notes-count
+### Get notesCount by Id [/v1/service-orders/{id}/notes-count]
 
 #### Get notesCount by Id [GET]
 
@@ -18217,7 +18119,7 @@ Get notesCount by Id
               }
             }
 
-### /v1/service-orders/{id}/order-summary
+### Get orderSummary [/v1/service-orders/{id}/order-summary]
 
 #### Get orderSummary [GET]
 
@@ -18255,7 +18157,7 @@ Get orderSummary
               }
             }
 
-### /v1/service-orders/{id}/owner/{ownerId}
+### Update a orderOwner [/v1/service-orders/{id}/owner/{ownerId}]
 
 #### Update a orderOwner [PUT]
 
@@ -18295,7 +18197,7 @@ Update a orderOwner
               }
             }
 
-### /v1/service-orders/{id}/schedule-date
+### Update schedule date [/v1/service-orders/{id}/schedule-date]
 
 #### Update schedule date [PUT]
 
@@ -18305,15 +18207,6 @@ Update schedule date
 
             Authorization: Enter your authorization code
 
-+ Request
-    + Headers
-
-            Authorization: Enter your authorization code
-
-+ Request
-    + Headers
-
-            Authorization: Enter your authorization code
 
 
 + Parameters
@@ -18343,7 +18236,7 @@ Update schedule date
               }
             }
 
-### /v1/service-orders/{id}/sla-date
+### Update slaDate by Id [/v1/service-orders/{id}/sla-date]
 
 #### Update slaDate by Id [PUT]
 
@@ -18353,12 +18246,6 @@ Update slaDate by Id
 
             Authorization: Enter your authorization code
 
-+ Request
-    + Headers
-
-            Authorization: Enter your authorization code
-
-
 + Parameters
 
     + id (required)
@@ -18386,7 +18273,7 @@ Update slaDate by Id
               }
             }
 
-### /v1/service-orders/{id}/stage/{stageId}
+### Update a order stage [/v1/service-orders/{id}/stage/{stageId}]
 
 #### Update a order stage [PUT]
 
@@ -18426,7 +18313,7 @@ Update a orderStage
               }
             }
 
-### /v1/service-orders/{id}/status
+### Update  status of order [/v1/service-orders/{id}/status]
 
 #### Update  status of order [PUT]
 
@@ -18464,16 +18351,11 @@ Update status of order
               }
             }
 
-### /v1/service-orders/{id}/update-task
+### Update tasks [/v1/service-orders/{id}/update-task]
 
 #### Update tasks [PUT]
 
 Update tasks
-+ Request
-    + Headers
-
-            Authorization: Enter your authorization code
-
 + Request
     + Headers
 
@@ -18507,7 +18389,7 @@ Update tasks
               }
             }
 
-### /v1/service-orders/{id}/workflow
+### Update workflow status of order [/v1/service-orders/{id}/workflow]
 
 #### Update workflow status of order [PUT]
 
